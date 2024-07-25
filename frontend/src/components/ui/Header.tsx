@@ -5,7 +5,7 @@ import MainNav from '../MainNav';
  const Header = () => {
   return (
     <div className='border-b-2 border-b-orange-500 py-6  '>
-        <div className='container flex  justify-between '>
+        <div className='container flex  justify-between w-11/12'>
           <Link to="/" className='text-3xl font-bold tracking-tight text-orange-500'>
             MahdyMusave .com
           </Link>
