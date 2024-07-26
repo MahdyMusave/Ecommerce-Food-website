@@ -2,13 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import AppRoutes from './AppRoutes'
 import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import AuthPrivierWithNavigate from './components/auth/AuthPrividerWithNavigate'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-       <AppRoutes />
-    </BrowserRouter>
+    <Router>
+      <AuthPrivierWithNavigate>
+        <AppRoutes />
+      </AuthPrivierWithNavigate>
+       
+    </Router>
    
   </React.StrictMode>,
 )
