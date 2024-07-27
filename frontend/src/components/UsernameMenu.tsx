@@ -16,15 +16,15 @@ import { Button } from './ui/button';
                 user?.email
             }
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-            <DropdownMenuItem>
+        <DropdownMenuContent className=" px-4 border border-slate-300">
+            <DropdownMenuItem >
                 <Link to="/user-profile" className='font-bold hover:text-orange-500'>
                     User Profile
                 </Link>
             </DropdownMenuItem>
             <Separator />
-            <DropdownMenuItem>
-                <Button className='flex flex-1 font-bold bg-orange-500' onClick={()=>{
+            <DropdownMenuItem >
+                <Button className='flex flex-1 font-bold bg-orange-500 rounded-lg' onClick={()=>{
                     logout()
                 }} 
                     

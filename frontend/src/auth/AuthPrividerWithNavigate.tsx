@@ -17,21 +17,27 @@ const AuthProviderWithNavigate = ({ children }: Props) => {
         throw new Error("Unable to initialize auth");
     }
 
-    const onRedirectCallback = (appState?: AppState) => {
-        navigate(appState?.returnTo || window.location.pathname);
+    const onRedirectCallback = (appState?: AppState, user?:User) => {
+        // navigate(appState?.returnTo || window.location.pathname)
+        console.log(user)
     };
 
     return (
+    
         <Auth0Provider
             domain={domain}
-            clientId={clientId}
+            clientId={ clientId}
             authorizationParams={{
-                redirect_uri: redirectUri,
+            // redirect_uri: window.location.origin,
+             redirect_uri:redirectUri
+            
             }}
             onRedirectCallback={onRedirectCallback}
-        >
-            {children}
-        </Auth0Provider>
+         >
+     {children}
+  </Auth0Provider>
+    
+    
     );
 };
 
